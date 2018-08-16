@@ -1,6 +1,6 @@
 'MIWeb.GridWall:GridWall':
   superTypes:
-    'TYPO3.Neos:Content': TRUE
+    'Neos.Neos:Content': TRUE
   ui:
     label: 'Grid Wall'
     help:
