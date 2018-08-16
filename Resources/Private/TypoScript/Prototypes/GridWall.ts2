@@ -37,6 +37,6 @@ prototype(MIWeb.GridWall:GridWall) < prototype(Neos.Neos:Content) {
 prototype(MIWeb.GridWall:GridWallElement) < prototype(TYPO3.TypoScript:Tag) {
 	attributes.class = 'gridwall-element'
 
-	content = TYPO3.Neos:ContentCase
-	@process.contentElementWrapping = TYPO3.Neos:ContentElementWrapping
+	content = Neos.Neos:ContentCase
+	@process.contentElementWrapping = Neos.Neos:ContentElementWrapping
 }
