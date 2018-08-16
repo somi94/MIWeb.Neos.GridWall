@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="../Styles/gridwall.css" />
+		
+		<style type="text/css">
+			#grid-test {
+				border: 1px solid #f00;
+				box-sizing: border-box;
+				max-width: 100%;
+				width: 800px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="grid-test" class="gridwall">
+			<div style="background-color: #f00; width: 800px; height: 600px;">Hello</div>
+			<div style="background-color: #0f0; width: 500px; height: 500px;">World</div>
+			<div style="background-color: #00f; width: 200px; height: 250px;">This</div>
+			<div style="background-color: #ff0; width: 100px; height: 100px;">Is</div>
+			<div style="background-color: #0ff; width: 250px; height: 250px;">My</div>
+			<div style="background-color: #f0f; width: 500px; height: 250px;">GridWall</div>
+		</div>
+		<script type="text/javascript" src="../Scripts/gridwall.css"></script>
+		<script type="text/javascript">
+			window.onload = function() {
+				new MIWeb.GridWall(document.getElementById('grid-test'), {
+					height: 200,
+					maxCols: 3,
+					zoom: 'overlay'
+				});
+			};
+		</script>
+	</body>
+</html>
