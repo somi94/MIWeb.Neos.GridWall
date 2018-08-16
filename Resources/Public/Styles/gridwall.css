@@ -1,0 +1,54 @@
+.gridwall {
+  line-height: 0;
+  position: relative;
+}
+
+.gridwall > .gridwall-element-container > .gridwall-element {
+  cursor: pointer;
+  display: inline-block;
+  margin: 0;
+  max-width: 100%;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.gridwall > .gridwall-element-container > .gridwall-element > * {
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.gridwall .gridwall-overlay,
+.gridwall-popup {
+  background-color: rgba(0,0,0,.75);
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  max-height: 0;
+  max-width: 0;
+  opacity: 0;
+  padding-top: 5%;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  top: 0;
+  transition: opacity 0.5s, max-width .5s, max-height .5s;
+}
+
+.gridwall .gridwall-overlay > *,
+.gridwall-popup > * {
+  max-height: 90%;
+  max-width: 90%;
+}
+
+.gridwall.zoomed .gridwall-overlay,
+.gridwall-popup.opened {
+  opacity: 1;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.gridwall-popup {
+  position: fixed;
+}
