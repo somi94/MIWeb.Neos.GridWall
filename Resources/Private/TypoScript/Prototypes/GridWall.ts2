@@ -1,4 +1,4 @@
-prototype(MIWeb.GridWall:GridWall) < prototype(TYPO3.Neos:Content) {
+prototype(MIWeb.GridWall:GridWall) < prototype(Neos.Neos:Content) {
 	attributes.class.gridwall = 'miweb-gridwall'
 
 	attributes.data-gridwall = TYPO3.TypoScript:RawArray {
