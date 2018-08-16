@@ -1,0 +1,37 @@
+'MIWeb.GridWall:GridWall':
+  superTypes:
+    'TYPO3.Neos:Content': TRUE
+  ui:
+    label: 'Grid Wall'
+    help:
+      message: Display media or content containers stuffed into a container
+    icon: 'icon-picture'
+    inlineEditable: TRUE
+    inspector:
+      groups:
+        gridSettings:
+          label: 'Grid Wall options'
+          position: 9
+  constraints:
+    nodeTypes:
+      '*': TRUE
+  properties:
+    zoom:
+      type: string
+      ui:
+        label: 'Zoom Mode'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'gridSettings'
+          position: 99
+          editor: 'TYPO3.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            placeholder: 'Default: overlay'
+            allowEmpty: TRUE
+            values:
+              none:
+                label: 'None'
+              overlay:
+                label: 'Overlay'
+              popup:
+                label: 'Popup'
