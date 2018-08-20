@@ -1,4 +1,4 @@
-# MIWeb.GridWall
+# MIWeb.Neos.GridWall
 A js package to group images/videos/containers inside a wrapping container (similar to google images).
 
 The package is designed to be used within the Neos CMS, but the scripts and styles can be used on any webpage.
