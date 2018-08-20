@@ -1,0 +1,8 @@
+prototype(MIWeb.Neos.GridWall:GridWall) < prototype(Neos.Neos:ContentCollection) {
+    attributes.class = 'miweb-neos-gridwall'
+    
+    attributes.data-gridwall = Neos.Fusion:RawArray {
+        zoom      = ${q(node).property('zoom') ? q(node).property('zoom') : 'overlay'}
+    }
+    attributes.data-gridwall.@process.toJson = ${Json.stringify(value)}
+}
