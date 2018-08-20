@@ -25,10 +25,39 @@
       'Neos.NodeTypes:ContentReferences': TRUE
       'Neos.Demo:YouTube': TRUE
   properties:
+    height:
+      type: string
+      defaultValue: ''
+      ui:
+        label: 'Reference height'
+        help:
+          message: |
+            Defines base height of the rows (actual height will vary to fit container width).
+            Use numeric values or 'min'/'max'/'avg'.
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'gridSettings'
+          position: 20
+    maxCols:
+      type: integer
+      defaultValue: ''
+      ui:
+        label: 'Max Columns'
+        help:
+          message: |
+            Defines maximum number of elements per row.
+            Use numeric values or '' for no limit.
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'gridSettings'
+          position: 30
     zoom:
       type: string
       ui:
         label: 'Zoom Mode'
+        help:
+          message: |
+            Zoom mode on element klick.
         reloadIfChanged: TRUE
         inspector:
           group: 'gridSettings'
