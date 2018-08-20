@@ -1,8 +1,10 @@
-'MIWeb.GridWall:GridWall':
+'MIWeb.Neos.GridWall:GridWall':
   superTypes:
     'Neos.Neos:Content': TRUE
+    'Neos.Neos:ContentCollection': TRUE
   ui:
     label: 'Grid Wall'
+    group: 'plugins'
     help:
       message: Display media or content containers stuffed into a container
     icon: 'icon-picture'
@@ -14,7 +16,14 @@
           position: 9
   constraints:
     nodeTypes:
-      '*': TRUE
+      '*': FALSE
+      'Neos.NodeTypes:Headline': TRUE
+      'Neos.NodeTypes:Text': TRUE
+      'Neos.NodeTypes:TextWithImage': TRUE
+      'Neos.NodeTypes:Image': TRUE
+      'Neos.NodeTypes:Html': TRUE
+      'Neos.NodeTypes:ContentReferences': TRUE
+      'Neos.Demo:YouTube': TRUE
   properties:
     zoom:
       type: string
