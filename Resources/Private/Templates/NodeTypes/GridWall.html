@@ -5,10 +5,11 @@
 </f:section>
 
 <f:section name="scripts">
-    <script type="text/javascript" src="resource://MIWeb.Neos.GridWall/Public/Styles/gridwall.js"></script>
+    <script type="text/javascript" src="resource://MIWeb.Neos.GridWall/Public/Scripts/gridwall.js"></script>
 
     <script type="text/javascript">
         window.onload = function() {
+            console.log('wall!');
           var walls = document.querySelectorAll('.miweb-neos-gridwall');
           for(var i = 0; i < walls.length; i++) {
             var wall = walls[i];

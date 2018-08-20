@@ -27,6 +27,10 @@ MIWeb.GridWall.prototype.init = function() {
     a[n].parentNode.removeChild(a[n]);
   }
 
+  if(!this.hasClass(this.container, 'gridwall')) {
+    this.addClass(this.container, 'gridwall')
+  }
+
   if(!this.elements) {
     this.elements = document.createElement("div");
     this.elements.className = "gridwall-element-container";
