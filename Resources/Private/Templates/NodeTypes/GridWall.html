@@ -1,0 +1,24 @@
+{namespace neos=Neos\Neos\ViewHelpers}
+
+<f:section name="styles">
+    <link rel="stylesheet" type="text/css" href="resource://MIWeb.Neos.GridWall/Public/Styles/gridwall.css" />
+</f:section>
+
+<f:section name="scripts">
+    <script type="text/javascript" src="resource://MIWeb.Neos.GridWall/Public/Styles/gridwall.js"></script>
+
+    <script type="text/javascript">
+        window.onload = function() {
+          var walls = document.querySelectorAll('.miweb-neos-gridwall');
+          for(var i = 0; i < walls.length; i++) {
+            var wall = walls[i];
+            var config = {};
+            if(wall.hasAttribute('data-gridwall')) {
+              config = JSON.parse(wall.getAttribute('data-gridwall')) || {};
+            }
+            
+            new MIWeb.GridWall(wall, config);
+          }
+        };
+    </script>
+</f:section>
