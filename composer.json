@@ -1,17 +1,17 @@
 {
-    "name": "miweb/gridwall",
+    "name": "miweb/neos-gridwall",
     "type": "neos-plugin",
     "description": "",
     "require": {
     },
     "autoload": {
         "psr-4": {
-            "MIWeb\\GridWall\\": "Classes/"
+            "MIWeb\\Neos\\GridWall\\": "Classes/"
         }
     },
     "extra": {
         "neos": {
-            "package-key": "MIWeb.GridWall"
+            "package-key": "MIWeb.Neos.GridWall"
         }
     }
 }
