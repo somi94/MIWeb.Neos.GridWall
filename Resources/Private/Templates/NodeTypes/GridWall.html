@@ -1,15 +1,14 @@
 {namespace neos=Neos\Neos\ViewHelpers}
 
-<f:section name="styles">
+<f:section name="Styles">
     <link rel="stylesheet" type="text/css" href="resource://MIWeb.Neos.GridWall/Public/Styles/gridwall.css" />
 </f:section>
 
-<f:section name="scripts">
+<f:section name="Scripts">
     <script type="text/javascript" src="resource://MIWeb.Neos.GridWall/Public/Scripts/gridwall.js"></script>
 
     <script type="text/javascript">
         window.onload = function() {
-            console.log('wall!');
           var walls = document.querySelectorAll('.miweb-neos-gridwall');
           for(var i = 0; i < walls.length; i++) {
             var wall = walls[i];

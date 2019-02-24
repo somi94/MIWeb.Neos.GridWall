@@ -1,0 +1,21 @@
+prototype(Neos.Neos:Page) {
+	@context.gridwallEnabled = ${q(node).find('[instanceof MIWeb.Neos.GridWall:GridWall]').count() > 0}
+
+    head.stylesheets.gridwall = Neos.Fusion:Template {
+        templatePath = 'resource://MIWeb.Neos.GridWall/Private/Templates/NodeTypes/GridWall.html'
+        sectionName = 'Styles'
+        node = ${node}
+
+		@if.gridwallEnabled = ${gridwallEnabled}
+        @position = 'after site'
+    }
+
+    body.javascripts.gridwall = Neos.Fusion:Template {
+        templatePath = 'resource://MIWeb.Neos.GridWall/Private/Templates/NodeTypes/GridWall.html'
+        sectionName = 'Scripts'
+        node = ${node}
+
+		@if.gridwallEnabled = ${gridwallEnabled}
+        @position = 'after site'
+    }
+}
